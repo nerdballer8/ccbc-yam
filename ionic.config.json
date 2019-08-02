@@ -1,0 +1,7 @@
+{
+  "name": "ccbc-yam",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
