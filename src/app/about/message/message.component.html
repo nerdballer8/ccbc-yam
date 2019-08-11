@@ -1,0 +1,39 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-img src="assets/images/alex-knight-Kll7FpCjS30-unsplash.jpg"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-padding">
+      <ion-text color="primary">
+        <h5 class="ion-text-center ion-text-uppercase">Message</h5>
+      </ion-text>
+      <ion-text color="dark">
+        <h1 class="ion-text-center">
+          From the Camp Director
+        </h1>
+        <article>
+          <ng-container *ngFor="let text of (Content$ | async)?.values[0]">
+            <p *ngIf="text">
+              {{text}}
+            </p>
+          </ng-container>
+        </article>
+      </ion-text>
+      <ion-list>
+        <ion-item>
+          <ion-avatar slot="start">
+            <img src="assets/avatars/eunice.jpg">
+          </ion-avatar>
+          <ion-label>
+            <ion-text color="primary">
+              <h5 class="ion-text-uppercase">Eunice Montilla</h5>
+            </ion-text>
+            <span>Camp Director</span>
+          </ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-col>
+  </ion-row>
+</ion-grid>

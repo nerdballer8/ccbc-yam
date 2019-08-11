@@ -1,0 +1,34 @@
+<ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-img src="assets/images/meagan-carsience-txThZOwDrCs-unsplash.jpg"></ion-img>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col class="ion-padding">
+      <ion-text color="primary">
+        <h5 class="ion-text-center ion-text-uppercase">Introduction</h5>
+      </ion-text>
+      <ion-text color="dark">
+        <h1 class="ion-text-center">
+          About Endgame
+        </h1>
+        <article>
+          <ng-container *ngFor="let text of (Content$ | async)?.values[0]">
+            <p *ngIf="text">
+              {{text}}
+            </p>
+          </ng-container>
+          <blockquote>
+            "Look, I am coming soon! Blessed is the one who keeps the words of the
+            prophecy written in this scroll."
+
+            <span class="reference">
+              Revelations 22:7 (NIV)
+            </span>
+          </blockquote>
+        </article>
+      </ion-text>
+    </ion-col>
+  </ion-row>
+</ion-grid>

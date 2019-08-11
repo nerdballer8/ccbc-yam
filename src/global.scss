@@ -16,7 +16,7 @@
 @import "~@ionic/angular/css/normalize.css";
 @import "~@ionic/angular/css/structure.css";
 @import "~@ionic/angular/css/typography.css";
-@import '~@ionic/angular/css/display.css';
+@import "~@ionic/angular/css/display.css";
 
 /* Optional CSS utils that can be commented out */
 @import "~@ionic/angular/css/padding.css";
@@ -24,3 +24,73 @@
 @import "~@ionic/angular/css/text-alignment.css";
 @import "~@ionic/angular/css/text-transformation.css";
 @import "~@ionic/angular/css/flex-utils.css";
+
+/* Custom styles start here */
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  line-height: 1.25rem;
+}
+
+ion-toolbar {
+  min-height: 50px;
+}
+
+.eg-logo {
+  width: auto;
+  height: 2rem;
+}
+
+ion-tabs {
+  ion-tab-button {
+    border-bottom: 1px solid transparent;
+
+    ion-label {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: .625rem;
+      text-transform: uppercase;
+    }
+
+    &.tab-selected {
+      ion-label {
+        font-weight: 700;
+      }
+
+      border-color: var(--ion-color-primary-shade);
+    }
+  }
+}
+
+.ion-page {
+  .ion-page {
+    overflow-y: auto;
+  }
+}
+
+blockquote {
+  margin: 1rem 0;
+  padding: 2rem 1.5rem;
+  background: linear-gradient(180deg, #F2F2F2 0%, #E5E5E5 100%);
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--ion-color-secondary);
+  text-transform: uppercase;
+  line-height: 1.25em;
+  text-align: center;
+
+  .reference {
+    display: block;
+    margin-top: 1rem;
+    font-size: .75rem;
+    text-transform: capitalize;
+  }
+}

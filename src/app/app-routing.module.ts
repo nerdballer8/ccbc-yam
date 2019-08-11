@@ -4,17 +4,29 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'about',
     pathMatch: 'full'
   },
+  { path: 'about', loadChildren: './about/about.module#AboutPageModule' },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+    path: 'schedule',
+    loadChildren: './schedule/schedule.module#SchedulePageModule'
   },
   {
-    path: 'list',
-    loadChildren: () => import('./list/list.module').then(m => m.ListPageModule)
-  }
+    path: 'speakers',
+    loadChildren: './speakers/speakers.module#SpeakersPageModule'
+  },
+  {
+    path: 'devotionals',
+    loadChildren: './devotionals/devotionals.module#DevotionalsPageModule'
+  },
+  { path: 'rules', loadChildren: './rules/rules.module#RulesPageModule' },
+  { path: 'map', loadChildren: './map/map.module#MapPageModule' },
+  {
+    path: 'playlist',
+    loadChildren: './playlist/playlist.module#PlaylistPageModule'
+  },
+  { path: 'staff', loadChildren: './staff/staff.module#StaffPageModule' }
 ];
 
 @NgModule({
