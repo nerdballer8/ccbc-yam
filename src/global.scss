@@ -48,6 +48,10 @@ ion-toolbar {
   height: 2rem;
 }
 
+.eg-nav {
+  --ion-font-family: 'Josefin Sans', sans-serif;
+}
+
 ion-tabs {
   ion-tab-button {
     border-bottom: 1px solid transparent;
@@ -93,4 +97,8 @@ blockquote {
     font-size: .75rem;
     text-transform: capitalize;
   }
+}
+
+iframe {
+  height: calc(100vh - 50px);
 }

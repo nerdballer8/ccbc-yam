@@ -1,0 +1,54 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>
+      <ion-img class="eg-logo" src="assets/EG LOGO Black.png"></ion-img>
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row *ngIf="(DevoDetails$ | async)?.values">
+      <ion-col *ngFor="let devo of (DevoDetails$ | async)?.values">
+        <ion-card>
+          <ion-card-header>
+            <ion-card-subtitle color="primary">
+              <h5 class="ion-text-center ion-text-uppercase">Devotional</h5>
+            </ion-card-subtitle>
+            <ion-card-title class="ion-text-center">{{devo[0]}}</ion-card-title>
+            <blockquote class="ion-margin-top">
+              {{devo[2]}}
+
+              <span class="reference">
+                {{devo[1]}}
+              </span>
+            </blockquote>
+          </ion-card-header>
+          <ion-card-content>
+            <article [innerHtml]="devo[3]">
+            </article>
+          </ion-card-content>
+        </ion-card>
+
+        <aside class="ion-padding">
+          <ion-text color="secondary">
+            <h5 class="ion-text-center">Points to ponder:</h5>
+          </ion-text>
+          <ion-text color="medium">
+            <ol>
+              <li *ngIf="devo[4]" class="ion-margin-bottom">{{devo[4]}}</li>
+              <li *ngIf="devo[5]" class="ion-margin-bottom">{{devo[5]}}</li>
+              <li *ngIf="devo[6]" class="ion-margin-bottom">{{devo[6]}}</li>
+            </ol>
+          </ion-text>
+        </aside>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

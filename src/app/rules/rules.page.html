@@ -13,5 +13,49 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row *ngIf="(Dos$ | async)?.values.length">
+      <ion-col>
+        <ion-text color="primary">
+          <h5 class="ion-text-center ion-text-uppercase">Rules & Guidelines</h5>
+        </ion-text>
+        <ion-text color="dark" class="ion-margin-vertical">
+          <h1 class="ion-text-center">
+            <span>Do</span>
+            <ion-icon class="ion-margin-start" name="checkbox-outline" size="medium"></ion-icon>
+          </h1>
+          <ul>
+            <li *ngFor="let item of (Dos$ | async)?.values; let idx = index"
+              class="ion-margin-bottom ion-padding-right">
+              {{item}}
+            </li>
+          </ul>
+        </ion-text>
+        <ion-text color="dark" class="ion-margin-vertical">
+          <h1 class="ion-text-center">
+            <span>Don't</span>
+            <ion-icon class="ion-margin-start" name="close-circle-outline" size="medium"></ion-icon>
+          </h1>
+          <ul>
+            <li *ngFor="let item of (Donts$ | async)?.values; let idx = index"
+              class="ion-margin-bottom ion-padding-right">
+              {{item}}
+            </li>
+          </ul>
+        </ion-text>
+        <ion-text color="dark" class="ion-margin-vertical">
+          <h1 class="ion-text-center">
+            <span>For Your Safety</span>
+            <ion-icon class="ion-margin-start" name="medkit" size="medium"></ion-icon>
+          </h1>
+          <ul>
+            <li *ngFor="let item of (Safety$ | async)?.values; let idx = index"
+              class="ion-margin-bottom ion-padding-right">
+              {{item}}
+            </li>
+          </ul>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

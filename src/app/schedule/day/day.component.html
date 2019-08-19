@@ -1,0 +1,6 @@
+<table *ngIf="eventIndex">
+  <tr *ngFor="let event of events[eventIndex]; let idx = index">
+    <td class="ion-padding">{{event.time}}</td>
+    <td class="ion-padding">{{event.name}}</td>
+  </tr>
+</table>

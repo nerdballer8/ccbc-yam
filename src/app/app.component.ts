@@ -17,20 +17,20 @@ export class AppComponent {
       icon: 'information-circle'
     },
     {
-      title: 'Schedule',
-      url: 'schedule',
-      icon: 'calendar'
-    },
-    {
-      title: 'Speakers',
-      url: 'speakers',
-      icon: 'microphone'
-    },
-    {
       title: 'Devotionals',
       url: 'devotionals',
       icon: 'bookmarks'
     },
+    {
+      title: 'Schedule',
+      url: 'schedule',
+      icon: 'calendar'
+    },
+    // {
+    //   title: 'Speakers',
+    //   url: 'speakers',
+    //   icon: 'microphone'
+    // },
     {
       title: 'Rules & Guidelines',
       url: 'rules',
@@ -41,11 +41,11 @@ export class AppComponent {
       url: 'map',
       icon: 'pin'
     },
-    {
-      title: 'Playlist',
-      url: 'playlist',
-      icon: 'play-circle'
-    },
+    // {
+    //   title: 'Playlist',
+    //   url: 'playlist',
+    //   icon: 'play-circle'
+    // },
     {
       title: 'Staff',
       url: 'staff',

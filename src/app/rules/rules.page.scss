@@ -1,0 +1,14 @@
+h1 {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ul {
+  padding-bottom: 1rem;
+
+  li {
+    color: var(--ion-color-secondary-tint);
+  }
+}

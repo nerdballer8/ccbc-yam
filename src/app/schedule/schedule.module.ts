@@ -6,11 +6,23 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SchedulePage } from './schedule.page';
+import { DayComponent } from './day/day.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: SchedulePage
+    component: SchedulePage,
+    children: [
+      {
+        path: '',
+        redirectTo: '1',
+        pathMatch: 'full'
+      },
+      {
+        path: ':id',
+        component: DayComponent
+      }
+    ]
   }
 ];
 
@@ -21,6 +33,6 @@ const routes: Routes = [
     IonicModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SchedulePage]
+  declarations: [SchedulePage, DayComponent]
 })
 export class SchedulePageModule {}

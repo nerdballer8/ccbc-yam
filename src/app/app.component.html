@@ -6,16 +6,23 @@
           <ion-title>Menu</ion-title>
         </ion-toolbar>
       </ion-header>
-      <ion-content>
+      <ion-content class="eg-nav">
         <ion-list>
           <ion-menu-toggle auto-hide="false" *ngFor="let p of appPages">
             <ion-item [routerDirection]="'root'" [routerLink]="[p.url]">
-              <ion-icon slot="start" [name]="p.icon"></ion-icon>
+              <ion-icon slot="start" [name]="p.icon" color="primary"></ion-icon>
               <ion-label>
                 {{p.title}}
               </ion-label>
             </ion-item>
           </ion-menu-toggle>
+          <ion-item
+            [href]="'https://open.spotify.com/playlist/3Y1y9P4o2ZCzNM8mo7ZALE?si=BLy5WMhuSRS9c02gE8qQZA&fbclid=IwAR0zo_MnRvj56signfVpOGTcTV_jATYYz69tiPQpkPohArndONo6Gj1_otc'">
+            <ion-icon slot="start" [name]="'play-circle'" color="primary"></ion-icon>
+            <ion-label>
+              Playlist
+            </ion-label>
+          </ion-item>
         </ion-list>
       </ion-content>
     </ion-menu>

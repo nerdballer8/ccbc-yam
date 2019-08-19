@@ -13,9 +13,9 @@ import { Observable } from 'rxjs';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  public getValues(range: string): Observable<any> {
+  public getValues(range: string, dimension = 'COLUMNS'): Observable<any> {
     return this.http.get(
-      `${SHEETS_API_URL}/${SHEETS_ID}/values/${range}?majorDimension=COLUMNS&key=${SHEETS_API_KEY}`
+      `${SHEETS_API_URL}/${SHEETS_ID}/values/${range}?majorDimension=${dimension}&key=${SHEETS_API_KEY}`
     );
   }
 }
