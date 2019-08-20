@@ -13,5 +13,22 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-grid>
+    <ion-row>
+      <ion-col class="ion-text-center">
+        <ng-container *ngFor="let item of (Staff$ | async)?.values">
+          <h1 *ngIf="item.length === 1" class="ion-text-uppercase">{{item[0]}}</h1>
+          <h5 *ngIf="item.length > 1">{{item[1]}}</h5>
+        </ng-container>
+      </ion-col>
+    </ion-row>
+    <ion-row class="eg-logos">
+      <ion-col>
+        <ion-img [src]="'assets/YAM LOGO 2018.jpg'"></ion-img>
+      </ion-col>
+      <ion-col>
+        <ion-img [src]="'assets/WIT TAG Black NB.png'"></ion-img>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
