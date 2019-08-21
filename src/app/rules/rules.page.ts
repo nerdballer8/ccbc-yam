@@ -15,7 +15,7 @@ export class RulesPage implements OnInit {
   constructor(public api: ApiService) {
     this.Dos$ = this.api.getValues('RULES!C5:C23', 'ROWS');
     this.Donts$ = this.api.getValues('RULES!C26:C30', 'ROWS');
-    this.Safety$ = this.api.getValues('RULES!C33:C35', 'ROWS');
+    this.Safety$ = this.api.getValues('RULES!C33:C36', 'ROWS');
   }
 
   ngOnInit() {}

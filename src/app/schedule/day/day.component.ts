@@ -13,7 +13,7 @@ export class DayComponent implements OnInit, OnDestroy {
     1: [
       {
         name: 'Registration',
-        time: '5:30 AM - 6:30AM'
+        time: '5:30 AM - 6:30 AM'
       },
       {
         name: 'Travel to CCT',
@@ -167,7 +167,6 @@ export class DayComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.routes.params.pipe(untilDestroyed(this)).subscribe(params => {
       this.eventIndex = params.id;
-      console.log(this.eventIndex);
     });
   }
 
