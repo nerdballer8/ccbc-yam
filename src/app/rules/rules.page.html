@@ -26,7 +26,7 @@
           </h1>
           <ul>
             <li *ngFor="let item of (Dos$ | async)?.values; let idx = index"
-              class="ion-margin-bottom ion-padding-right">
+              [ngClass]="{'ion-margin-bottom ion-padding-right': true, 'ion-text-uppercase subcategs' : [0,1,7,14].includes(idx)}">
               {{item}}
             </li>
           </ul>
