@@ -21,6 +21,9 @@
         "/index.html",
         "/*.css",
         "/*.js"
+      ],
+      "urls": [
+        "https://fonts.googleapis.com/**"
       ]
     }
   }, {
@@ -30,7 +33,17 @@
     "resources": {
       "files": [
         "/assets/**",
-        "/*.(eot|svg|cur|jpg|png|webp|gif|otf|ttf|woff|woff2|ani)"
+        "/svg/*-menu.svg",
+        "/svg/*-information-circle.svg",
+        "/svg/*-bookmarks.svg",
+        "/svg/*-calendar.svg",
+        "/svg/*-paper.svg",
+        "/svg/*-pin.svg",
+        "/svg/*-people.svg",
+        "/svg/*-checkbox-outline.svg",
+        "/svg/*-close-circle-outline.svg",
+        "/svg/*-medkit.svg",
+        "/*.(eot|svg|cur|jpg|jpeg|svg|png|webp|gif|otf|ttf|woff|woff2|ani)"
       ]
     }
   }]
