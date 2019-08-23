@@ -11,4 +11,8 @@ ul {
   li {
     color: var(--ion-color-secondary-tint);
   }
+  li.subcategs {
+  	font-weight: bold;
+  	list-style: none;
+  }
 }
