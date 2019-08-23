@@ -11,7 +11,7 @@ export class StaffPage implements OnInit {
   Staff$: Observable<any>;
 
   constructor(public api: ApiService) {
-    this.Staff$ = this.api.getValues('STAFF!B2:E53', 'ROWS');
+    this.Staff$ = this.api.getValues('STAFF!B2:E55', 'ROWS');
   }
 
   ngOnInit() {}
